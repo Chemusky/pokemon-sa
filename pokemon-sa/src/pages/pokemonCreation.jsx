@@ -1,6 +1,6 @@
 import { addPokemon } from "../api/pokemonFecth";
 import Link from "next/link";
-import {  useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 export default function PokemonGenerator() {
@@ -32,7 +32,12 @@ export default function PokemonGenerator() {
   };
 
   const addPokemonClick = () => {
-    alert(`${id}, ${name}, ${url}, ${JSON.stringify(details)}`);
+    alert(`
+    El pokemon añadido es:
+    ID: ${id},
+    NOMBRE: ${name}, 
+    ENLACE: ${url}, 
+    DETALLES DEL POKÉMON: ${JSON.stringify(details)}`);
     addPokemon(id, name, url, details);
   };
 
