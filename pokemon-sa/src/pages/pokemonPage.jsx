@@ -3,6 +3,7 @@ import Link from "next/link";
 import { deletePokemonById, modifyName } from "@/api/pokemonFecth";
 import React, { useState } from "react";
 import ListPokemonsComponent from "@/components/ListPokemonsComponent";
+import DetailsPokemonComponent from "@/components/DetailsPokemonComponent";
 
 export default function profilePage() {
   const router = useRouter();
@@ -10,18 +11,17 @@ export default function profilePage() {
 
   /*********************************** */
   // este código es para poder editar y coultar
-  const [name, setName] = useState("")
-  const [hidden, setHidden] = useState(false)
-
+  const [name, setName] = useState("");
+  const [hidden, setHidden] = useState(false);
 
   const modifyPokemonName = (e) => {
-    setName(e.target.value)
-  }
+    setName(e.target.value);
+  };
 
   const hideElement = () => {
-    let hiddenAux = hidden
-    setHidden(!hiddenAux)
-  }
+    let hiddenAux = hidden;
+    setHidden(!hiddenAux);
+  };
   /************************************* */
   const deletePokemon = () => {
     deletePokemonById(id);
@@ -32,25 +32,29 @@ export default function profilePage() {
     <div>
       <div hidden={hidden}>
         <ListPokemonsComponent pokemonId={id} />
+        <DetailsPokemonComponent pokemonId={id} />
       </div>
+
       <br />
       <button onClick={deletePokemon}>Eliminar el pokemon</button>
       <div hidden={!hidden}>
         <input type="text" value={name} onChange={modifyPokemonName} />
         <button
           onClick={() => {
-            modifyName(id, name)
+            modifyName(id, name);
           }}
           onChange={hideElement}
-        >Cambiar Nombre del pokemon</button>
+        >
+          Cambiar Nombre del pokemon
+        </button>
       </div>
       <div onClick={hideElement}>
-        <button >Editar</button>
+        <button>Editar</button>
       </div>
       <br />
       <Link
         href={{
-          pathname: "/"
+          pathname: "/",
         }}
       >
         Vuelta a la página principal
