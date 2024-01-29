@@ -39,7 +39,7 @@ export default function Home() {
       <h3 className="superpokemons-title">
         A continuación, se muestran todos los superpokemons!!
       </h3>
-      <div className="superpokemons-list">
+      <div className="superpokemons-list text-style-hover">
         {pokemons.map((pokemon, index) => {
           return (
             <div key={index}>
@@ -62,6 +62,9 @@ export default function Home() {
           );
         })}
       </div>
+      <footer className="footer text-style-hover">
+        <p>Pokemon sa, enero del 2024</p>
+      </footer>
     </>
   );
 }

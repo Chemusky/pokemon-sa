@@ -3,14 +3,13 @@ import Link from "next/link";
 import { deletePokemonById, modifyName } from "@/api/pokemonFecth";
 import React, { useState } from "react";
 import ListPokemonsComponent from "@/components/ListPokemonsComponent";
-import DetailsPokemonComponent from "@/components/DetailsPokemonComponent";
 
 export default function profilePage() {
   const router = useRouter();
   const { id } = router.query;
 
   /*********************************** */
-  // este código es para poder editar y coultar
+  // este código es para poder editar y ocultar
   const [name, setName] = useState("");
   const [hidden, setHidden] = useState(false);
 
@@ -32,7 +31,6 @@ export default function profilePage() {
     <div>
       <div hidden={hidden}>
         <ListPokemonsComponent pokemonId={id} />
-        <DetailsPokemonComponent pokemonId={id} />
       </div>
 
       <br />

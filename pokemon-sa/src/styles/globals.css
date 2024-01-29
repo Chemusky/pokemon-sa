@@ -1,6 +1,12 @@
 body {
-  background-color: #928e8e;
+  background-color: #9feeeac2;
 }
+
+button {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .main-title {
   text-align: center;
   text-decoration: underline;
@@ -11,7 +17,23 @@ body {
 }
 
 .superpokemons-list {
-  border: 1px solid #7fffd4;
+  border: 1px solid #fc0037;
   border-radius: 10px;
   padding: 20px;
+}
+
+.footer {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 190px;
+  padding: 20px;
+  border: 1px solid #fc0037;
+  border-radius: 10px;
+}
+
+.text-style-hover:hover {
+  /* Esta propiedad es específica al hacer hover sobre el contenedor que contiene elementos */
+  color: #850000;
+  transition: 0.2s;
+  font-weight: lighter;
 }

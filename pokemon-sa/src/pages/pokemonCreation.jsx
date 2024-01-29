@@ -48,15 +48,30 @@ export default function PokemonGenerator() {
       <div>
         <div>
           <span>Id: </span>
-          <input type="text" value={id} onChange={idHandler} />
+          <input
+            type="text"
+            value={id}
+            onChange={idHandler}
+            placeholder="Nº de indentificación"
+          />
         </div>
         <div>
           <span>Name: </span>
-          <input type="text" value={name} onChange={nameHandler} />
+          <input
+            type="text"
+            value={name}
+            onChange={nameHandler}
+            placeholder="Nombre del Pokémon"
+          />
         </div>
         <div>
           <span>URL: </span>
-          <input type="text" value={url} onChange={urlHandler} />
+          <input
+            type="text"
+            value={url}
+            onChange={urlHandler}
+            placeholder="URL del Pokémon"
+          />
         </div>
         <div>
           <span>Height: </span>
@@ -65,6 +80,7 @@ export default function PokemonGenerator() {
             name="height"
             value={details.height}
             onChange={detailsHandler}
+            placeholder="Altura del pokémon"
           />
         </div>
         <div>
@@ -74,6 +90,7 @@ export default function PokemonGenerator() {
             name="weight"
             value={details.weight}
             onChange={detailsHandler}
+            placeholder="Peso del Pokémon"
           />
         </div>
         <div>
@@ -83,6 +100,7 @@ export default function PokemonGenerator() {
             name="type"
             value={details.type[0]}
             onChange={detailsHandler}
+            placeholder="Tipo del Pokémon"
           />
         </div>
 
@@ -93,7 +111,6 @@ export default function PokemonGenerator() {
           pathname: "/",
         }}
       >
-        {" "}
         Vuelta a la página principal
       </Link>
     </div>

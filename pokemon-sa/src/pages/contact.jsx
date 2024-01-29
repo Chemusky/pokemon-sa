@@ -1,13 +1,12 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 export default function contact() {
-
   const user = {
-    name:"Tom",
-    surName: "Marvolo Riddle",
-    city: "Málaga la bella"
-  }
+    name: "José Miguel",
+    surName: "Romero Aja",
+    city: "Málaga la bella",
+  };
 
   return (
     <div>
@@ -18,11 +17,13 @@ export default function contact() {
         <p>Apellidos: {user.surName}</p>
         <p>Ciudad: {user.city}</p>
       </div>
-      <Link href={{
-        pathname: "/"
-      }}
-      >Vuelta a la página principal
+      <Link
+        href={{
+          pathname: "/",
+        }}
+      >
+        Vuelta a la página principal
       </Link>
     </div>
-  )
+  );
 }
